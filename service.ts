@@ -34,6 +34,10 @@ function main(workbook: ExcelScript.Workbook) {
         // have to hard code 4 and 1
     }
 
+    totalSheet.getRange("A1").setValue("Email");
+    totalSheet.getRange("B1").setValue("Name");
+    totalSheet.getRange("C1").setValue("Total Service Hours");
+
     let currentRow: number = 2
     totalService.forEach((val, key) => {
         let tempRange = totalSheet.getRange("A" + currentRow);
